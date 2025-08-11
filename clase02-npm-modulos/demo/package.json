@@ -1,0 +1,15 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "mi primir proyecto con NPM",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "brian gomez",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.30.1",
+    "popular-movie-quotes": "^1.2.4"
+  }
+}
