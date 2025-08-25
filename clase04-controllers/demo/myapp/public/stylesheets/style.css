@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: blueviolet;
+  color: white;
+}
+
+a {
+  color: #00B7FF;
+}
+
+header{
+  background-color: aquamarine;
+  height: 200px;
+}
+
+footer{
+  background-color: green;
+  height: 200px;
+
+}

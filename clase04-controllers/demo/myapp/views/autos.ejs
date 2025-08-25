@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+ 
+</head>
+<body>
+    <%- include('./partials/header') %>
+
+
+
+    <h1>Vista de autos</h1>
+
+    <% if (enOferta) { %>
+            <h2> todos los autos estan en oferta</h2>
+    <% } else { %>
+         <h2>Noooo, noo todos los autos estan en oferta</h2>
+    <% } %>
+
+
+
+
+
+    <% for( let i = 0; i < listadoAutos.length; i++ ) { %>
+        <p>Un auto <%= listadoAutos[i].color %> y con el año <%= listadoAutos[i].anio %> </p>
+    <% } %>
+
+
+
+    
+    <%- include('./partials/footer') %>
+</body>
+</html>
