@@ -50,6 +50,9 @@ let usersController = {
         req.session.user = userInfo;
 
         // check de recordarme?
+        if (userInfo.recordarme != undefined) {
+            res.cookie("user", userInfo, {maxAge: 600000})
+        }
         
         res.redirect("/movies")
         

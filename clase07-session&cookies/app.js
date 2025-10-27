@@ -36,12 +36,23 @@ app.use(function(req, res, next) {
   if (req.session.user != undefined) { // logueado
     res.locals.user = req.session.user;
   }
-
   return next();
 })
 
 
 // middleware de Cookies hacia Vistas
+app.use(function(req, res, next) {
+
+  console.log(req.cookies.user);
+  
+  
+  if (req.cookies.user != undefined && req.session.user == undefined) {
+    res.locals.user = req.cookies.user;   // uno lo envia a las vistas (partials)
+    req.session.user = req.cookies.user;  // otro lo vuelve a poner en session
+  }
+
+  return next();
+})
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
