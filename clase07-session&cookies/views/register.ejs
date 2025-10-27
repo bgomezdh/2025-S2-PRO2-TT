@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UdeSA Movies</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <%- include("./partials/menu.ejs") %>
+
+    <h2>Registrate</h2>
+    <p>Revisá las partes clave para que el formulario funcione y registre un usuario en la db. El modelo Users ya está creado.</p>
+    <p><strong>IMPORTANTE:</strong> La tabla de la base de datos no tienen definidos campos obligaorios. Si enviás el formulario vacío se guardará un registro nuevo pero con datos vacíos en cada campo de la tabla. Si ya mandaste un registro vacío recibirás un error en la pantalla.</p>
+       
+      <form action="/user/processLogin" method="PO">
+        <section>
+          <label for=""> Nombre de usuario: </label>
+          <input type="text" name="" placeholder="nombre de usuario">
+        </section>
+        <section>
+          <label for="">Email: </label>
+          <input type="email" name="" placeholder="email">
+        </section>
+        <section>
+          <label for="">Password:</label>
+          <input type="password" name="" placeholder="password">
+        </section>
+        <button type="submit">Registrate</button>
+      </form>
+
+  </body>
+</html>

@@ -1,0 +1,8 @@
+# Ignorar la carpeta de módulos de Node.js
+node_modules
+
+# Ignorar los archivos de metadatos de macOS
+.DS_Store
+
+# Ignorar la carpeta de configuración de Sequelize
+database/config/config.js

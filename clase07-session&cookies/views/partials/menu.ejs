@@ -1,0 +1,25 @@
+<h2>Menú</h2>
+<p>Navegá usando las opciones de la lista.</p>
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/movies">Películas</a></li>
+    
+    <% if(locals.user == null){ %>
+        <br>
+        <li style="list-style-type: none;">Estas 2 opciones deben verse únicamente si NO HAY usuario logueado (o sea, un usuario en sesión).</li>
+        <li><a href="/users/login">Ingresar</a></li>
+        <li><a href="/users/register">Registrate</a></li>
+    <% } else { %>
+        <li><a href="/users/logout">Logout</a></li>
+    <% } %>
+</ul>
+<p>Creá un form con un botón para procesar el logout. Este botón debe verse únicamente si hay un usuario en sesión.</p>
+
+<h2>Buscar películas</h2>
+<p>Creá un formulario para buscar películas</p>
+<form action="/movies/search-results" method="GET">
+    <input type="text" name="search" value="">
+    <button type="submit">Buscar</button>
+</form>
+
+<hr>

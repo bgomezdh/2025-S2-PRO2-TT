@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UdeSA Movies</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <%- include("./partials/menu.ejs") %>
+
+    <h2>Ingresar</h2>
+    <p>Revisá las partes clave para que el formulario funcione y loguee un usuario. El modelo Users ya está creado.</p>
+    <p><strong>IMPORTANTE:</strong> Loguear un usuario es técnicamente colocar alguno de sus datos o todos ellos en sesión. Con los datos en sesión podemos personalizar la experiencia de navegación y realizar controles de navegación. Por ejemplo: </p>
+    <ul>
+      <li>Si ya está logueado deberíamos evitar que el usuario pueda vovler a entrar a las vistas de registro o de loguin.</li>
+      <li> Si ya está logueado podemos personalizar la navegación saludando al usuario y dejando visible la opción de logout.</li>
+      <li>Si no está logueado podemos evitar que acceda a la pantalla de carga de productos o evitar que deje comentarios.</li>
+    </ul> 
+       
+      <form action="/users/processLogin" method="POST">
+        <section>
+          <label for="">Email: </label>
+          <input type="email" name="email" placeholder="email">
+        </section>
+        <section>
+          <label for="">Password:</label>
+          <input type="password" name="password" placeholder="password">
+        </section>
+        <button type="submit">Ingresar</button>
+        <section>
+          <input type="checkbox" id="tyc" name="recordarme">
+          <label for="tyc">Recordame</label>
+        </section>
+      </form>
+
+  </body>
+</html>
